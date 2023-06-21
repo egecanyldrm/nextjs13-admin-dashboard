@@ -1,0 +1,44 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Frontend/nextjs13-admin-dashboard/node_modules
+/Frontend/nextjs13-admin-dashboard/.pnp
+/Frontend/nextjs13-admin-dashboard/.pnp.js
+
+# testing
+/Frontend/nextjs13-admin-dashboard/coverage
+
+# next.js
+/Frontend/nextjs13-admin-dashboard/.next/
+/Frontend/nextjs13-admin-dashboard/out/
+
+# production
+/Frontend/nextjs13-admin-dashboard/build
+
+# misc
+/Frontend/nextjs13-admin-dashboard/.DS_Store
+/Frontend/nextjs13-admin-dashboard/*.pem
+
+# debug
+/Frontend/nextjs13-admin-dashboard/npm-debug.log*
+/Frontend/nextjs13-admin-dashboard/yarn-debug.log*
+/Frontend/nextjs13-admin-dashboard/yarn-error.log*
+
+# local env files
+/Frontend/nextjs13-admin-dashboard/.env*.local
+
+# vercel
+/Frontend/nextjs13-admin-dashboard/.vercel
+
+# typescript
+/Frontend/nextjs13-admin-dashboard/*.tsbuildinfo
+/Frontend/nextjs13-admin-dashboard/next-env.d.ts
+
+
+# ---- BACKEND 
+/Backend/nodejs_qr_api
+/Backend/nodejs_qr_api/node_modules
+/Backend/nodejs_qr_apipackage-lock.json
+
+/Backend/nodejs_qr_api/.env
+

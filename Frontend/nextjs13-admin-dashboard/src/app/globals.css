@@ -2,26 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+  .title {
+    @apply text-2xl uppercase;
+  }
+  .custom_input{
+    @apply rounded-md pl-4 pr-2 py-2 w-64  outline-2 outline-blue-700  text-black dark:text-white  dark:outline-white
+  }
 }
 
-@media (prefers-color-scheme: dark) {
+@layer components {
+  .card {
+    background-color: theme("colors.white");
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+  }
+}
+
+@layer utilities {
+  .h-half {
+    height: 30rem;
+  }
+}
+
+@media screen(md) {
+  .title {
+    @apply text-7xl uppercase;
+  }
+  
+  
+ 
+}
+
+:root {
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  min-height: 100vh;
+  display: flex;  
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+   */
+}
+.main-layout{
+  width: 85%;
+  padding : 2rem;
+  
+}
+.vertical-layout{
+  width : 15%;
+  ransition: .4s cubic-bezier(.25,.8,.25,1),background 0s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
