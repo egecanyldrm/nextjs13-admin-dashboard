@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend-dev": "cd Frontend/nextjs13-admin-dashboard && yarn dev",
-    "backend-dev": "cd Backend/nodejs_qr_api && npm start"
+    "frontend": "cd Frontend/nextjs13-admin-dashboard && yarn dev",
+    "backend": "cd Backend/nodejs_qr_api && npm start"
   },
   "author": "",
   "license": "ISC",
