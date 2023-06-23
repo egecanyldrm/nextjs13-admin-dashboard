@@ -56,14 +56,10 @@
 body {
   color: rgb(var(--foreground-rgb));
   min-height: 100vh;
+}
+
+#dashboard-layout{
   display: flex;  
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-   */
 }
 .main-layout{
   width: 85%;

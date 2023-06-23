@@ -16,10 +16,12 @@ export default function RootLayout({ children }) {
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </head>
             <body className={inter.className}>
-                <VerticalMenu />
-                <MainLayout >
-                    {children}
-                </MainLayout>
+                <section id='dashboard-layout'>
+                    <VerticalMenu />
+                    <MainLayout >
+                        {children}
+                    </MainLayout>
+                </section>
             </body>
         </html >
     )

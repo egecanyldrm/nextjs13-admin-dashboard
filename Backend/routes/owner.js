@@ -11,7 +11,7 @@ const owner = require('../middleware/owner');
 
 //Product Process
 
-router.get('/customers', authJwt, owner, ownerController.getCustomers);
+router.post('/customers', authJwt, owner, ownerController.getCustomers);
 
 router.post('/get-customer', authJwt, owner, ownerController.getCustomer);
 

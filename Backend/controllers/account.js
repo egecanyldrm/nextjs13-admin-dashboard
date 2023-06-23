@@ -11,6 +11,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 exports.postLogin = async (req, res, next) => {
     const { email, password } = req.body;
+    console.log('req.body', req.body)
     try {
 
         const user = await User.findOne({ 'contact.email': email })
@@ -29,7 +30,6 @@ exports.postLogin = async (req, res, next) => {
         }
         const { username, name, role, _id, package } = user;
 
-        const userLanguage = package === 'deluxe' ? true : false;
 
         const token = jwt.sign({
             userId: user._id
@@ -41,9 +41,8 @@ exports.postLogin = async (req, res, next) => {
                 user: {
                     username: username,
                     name: name,
-                    role: role.isCustomer,
+                    role: role.isCustomer ? 'customer' : 'admin',
                     package: package,
-                    language: userLanguage
                 }
             });
     } catch (error) {

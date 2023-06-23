@@ -37,8 +37,8 @@
 
 # ---- BACKEND 
 # /Backend/nodejs_qr_api
-/Backend/nodejs_qr_api/node_modules
-/Backend/nodejs_qr_apipackage-lock.json
+/Backend/node_modules
+/Backend/   package-lock.json
 
-/Backend/nodejs_qr_api/.env
+/Backend/.env
 

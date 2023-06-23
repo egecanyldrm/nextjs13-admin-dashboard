@@ -9,7 +9,7 @@ const authJwt = require('../middleware/auth');
 //Routes 
 
 //Category Process
-router.get('/categories', authJwt, adminController.getCategories);
+router.post('/categories', authJwt, adminController.getCategories);
 
 router.post('/add-category', authJwt, adminController.addCategory);
 
@@ -21,7 +21,7 @@ router.post('/delete-category', authJwt, adminController.deleteCategory);
 
 //Product Process
 
-router.get('/products', authJwt, adminController.getProducts);
+router.post('/products', authJwt, adminController.getProducts);
 
 router.post('/remove-product-image', authJwt, adminController.removeProductImage);
 
@@ -35,7 +35,7 @@ router.post('/delete-product', authJwt, adminController.deleteProduct);
 
 
 //Bussiness Process 
-router.get('/business-detail', authJwt, adminController.getBusinessDetail)
+router.post('/business-detail', authJwt, adminController.getBusinessDetail)
 
 router.post('/remove-logo', authJwt, adminController.removeLogo)
 
@@ -47,9 +47,9 @@ router.post('/push-notification', authJwt, adminController.pushNotification)
 
 // Theme Settings Process 
 
-router.get('/get-theme', authJwt, adminController.getTheme)
+router.post('/get-theme', authJwt, adminController.getTheme)
 
-router.get('/theme-settings', authJwt, adminController.themeSettings)
+router.post('/theme-settings', authJwt, adminController.themeSettings)
 
 router.post('/change-theme', authJwt, adminController.changeTheme)
 
@@ -64,7 +64,7 @@ router.post('/product-translate', authJwt, adminController.productTranslate)
 
 
 
-router.get('/notifications', authJwt, adminController.getNotifications)
+router.post('/notifications', authJwt, adminController.getNotifications)
 router.post('/notification-isread', authJwt, adminController.notificationRead)
 
 module.exports = router;
